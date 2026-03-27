@@ -1,233 +1,1428 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Ingeniería de Sistemas</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ingeniería de Sistemas</title>
+        <style>
+            body {
+                font-family: serif;
+                margin: 20px;
+            }
 
-<style>
-body {
-    font-family: serif;
-    margin: 20px;
-}
+            .seccion {
+                display: none;
+            }
 
-.seccion {
-    display: none;
-}
-.activa {
-    display: block;
-}
+            .activa {
+                display: block;
+            }
 
-h1 {
-    font-size: 42px;
-    margin: 0 0 5px 0;
-}
-h2 {
-    font-size: 24px;
-    margin: 0 0 20px 0;
-}
-h3 {
-    font-size: 28px;
-    margin: 0 0 15px 0;
-}
+            h1 {
+                font-size: 42px;
+                margin: 0 0 5px 0;
+            }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-th, td {
-    border: 2px solid black;
-    padding: 8px;
-    text-align: left;
-    font-size: 16px;
-    vertical-align: top;
-}
-th {
-    background-color: #ffffff;
-}
+            h2 {
+                font-size: 24px;
+                margin: 0 0 20px 0;
+            }
 
-a {
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 16px;
-}
-</style>
+            h3 {
+                font-size: 28px;
+                margin: 0 0 15px 0;
+            }
 
-<script>
-function mostrarSeccion(id) {
-    document.getElementById('inicio').classList.remove('activa');
-    document.getElementById('docentes').classList.remove('activa');
-    document.getElementById('materias').classList.remove('activa');
-    document.getElementById(id).classList.add('activa');
-}
-</script>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
 
-</head>
-<body>
+            th, td {
+                border: 2px solid black;
+                padding: 8px;
+                text-align: left;
+                font-size: 16px;
+                vertical-align: top;
+            }
 
-<div id="inicio" class="seccion activa">
-    <h1>Ingeniería de Sistemas</h1>
-    <h2>Semestre: 1/2026</h2>
-    <ul>
-        <li><a onclick="mostrarSeccion('docentes')">Docentes</a></li>
-        <li><a onclick="mostrarSeccion('materias')">Materias</a></li>
-    </ul>
-</div>
+            th {
+                background-color: #ffffff;
+            }
 
-<div id="docentes" class="seccion">
-    <h3>Lista Docentes 1/2026</h3>
-    <table>
-        <tr>
-            <th>Nro</th>
-            <th>Apellidos y Nombres</th>
-            <th>Materias</th>
-            <th>Sigla</th>
-            <th>Carga Horaria</th>
-        </tr>
-        <tr><td>1</td><td>Pacheco Alvarez Kary</td><td>Inglés técnico G1<br>Inglés técnico G2</td><td>LIN140 G1<br>LIN140 G2</td><td>8 Hrs. Académicas</td></tr>
-        <tr><td>2</td><td>Colque Caballero Sabino</td><td>Álgebra G1<br>Álgebra G2<br>Cálculo 1 G3<br>Cálculo 2 G1<br>Investigación Operativa 1 G1</td><td>MAT100 G1<br>MAT100 G2<br>MAT101 G3<br>MAT204 G1<br>SIS443 G1</td><td>30 Hrs. Académicas</td></tr>
-        <tr><td>3</td><td>Camacho Ocsachoque Nelly</td><td>Estadística 1 G1<br>Estadística 2 G1</td><td>MAT102 G1<br>MAT206 G1</td><td>10 Hrs. Académicas</td></tr>
-        <tr><td>4</td><td>Bravo Villafuerte Clever Matchless</td><td>Técnicas de programación 1 G1<br>Técnicas de programación 2 G1<br>Sistemas Operativos G1<br>Configuración de servidores G1</td><td>SIS110 G1<br>SIS211 G1<br>SIS532 G1<br>SIS624 G1</td><td>26 Hrs. Académicas</td></tr>
-        <tr><td>5</td><td>Huayllas Garcia Juana</td><td>Inglés Técnico G3<br>Inglés Técnico G4</td><td>LIN140 G3<br>LIN140 G4</td><td>24 Hrs. Académicas</td></tr>
-        <tr><td>6</td><td>Choque Mamani Porfirio</td><td>Cálculo 1 G2<br>Álgebra Lineal y Teoría Matricial G2<br>Cálculo 3 G1</td><td>MAT101 G2<br>MAT203 G2<br>MAT307 G1</td><td>30 Hrs. Académicas</td></tr>
-        <tr><td>7</td><td>Borja Mamani Raquel</td><td>Estadística 1 G2<br>Estadística 2 G2</td><td>MAT102 G2<br>MAT206 G2</td><td>30 Hrs. Académicas</td></tr>
-        <tr><td>8</td><td>Huarachi Mamani Lidia</td><td>Estadística 1 G3</td><td>MAT102 G3</td><td>15 Hrs. Académicas</td></tr>
-        <tr><td>9</td><td>Ortega Reyes Efrain Pedro</td><td>Estadística 1 G4</td><td>MAT102 G4</td><td>28 Hrs. Académicas</td></tr>
-        <tr><td>10</td><td>Pozo Hidalgo Ruth</td><td>Álgebra Lineal y Teoría Matricial G1<br>Cálculo 2 G2<br>Cálculo 3 G2</td><td>MAT203 G1<br>MAT204 G2<br>MAT307 G2</td><td>30 Hrs. Académicas</td></tr>
-        <tr><td>11</td><td>Lopez Quentasi Jesus Eduard</td><td>Técnicas de programación 1 G2<br>Base de Datos G1<br>Taller de Base de Datos G2<br>Auditoría de Sistemas G1</td><td>SIS110 G2<br>SIS415 G1<br>SIS518 G2<br>SIS735 G1</td><td>40 Hrs. Académicas</td></tr>
-        <tr><td>12</td><td>Terrazas Quispe Wilfredo Fidel</td><td>Técnicas de programación 1 G3<br>Base de Datos G2<br>Taller de Base de Datos G1<br>Práctica Laboral G1</td><td>SIS110 G3<br>SIS415 G2<br>SIS518 G1<br>SIS848 G1</td><td>40 Hrs. Académicas</td></tr>
-        <tr><td>13</td><td>Puita Choque Gustavo Adolfo</td><td>Técnicas de programación 1 G4<br>Computación Básica G2<br>Arquitectura de Computadoras G1<br>Simulación de Sistemas G1<br>Robótica G1</td><td>SIS110 G4<br>SIS141 G2<br>SIS522 G1<br>SIS645 G1<br>OPT005 G1</td><td>48 Hrs. Académicas</td></tr>
-        <tr><td>14</td><td>Choque Matos Javier</td><td>Computación Básica G1<br>Diseño y Programación Gráfica G1<br>Tecnologías Emergentes G2</td><td>SIS141 G1<br>SIS313 G1<br>SIS414 G2</td><td>24 Hrs. Académicas</td></tr>
-        <tr><td>15</td><td>Sanchez Perez Karina Mercedes Regina</td><td>Computación Básica G3<br>Computación Básica G4<br>Sistemas Contables G2<br>Modelos Administrativos G1</td><td>SIS141 G3<br>SIS141 G4<br>SIS230 G2<br>SIS331 G1</td><td>28 Hrs. Académicas</td></tr>
-        <tr><td>16</td><td>Velarde Flores Kimberly Luz</td><td>Sistemas Contables G1<br>Modelos Administrativos G2<br>Metodología de la Investigación G1</td><td>SIS230 G1<br>SIS331 G2<br>SIS747 G1</td><td>18 Hrs. Académicas</td></tr>
-        <tr><td>17</td><td>Mamani Huanaco Elias</td><td>Física 1 G1<br>Física 2 G1<br>Física 2 G2<br>Electrónica G1</td><td>FIS205 G1<br>FIS308 G1<br>FIS308 G2<br>SIS421 G1</td><td>33 Hrs. Académicas</td></tr>
-        <tr><td>18</td><td>Ramos Castro Roberto</td><td>Física 1 G2</td><td>FIS205 G2</td><td>18 Hrs. Académicas</td></tr>
-        <tr><td>19</td><td>Humerez Martinez David Grover</td><td>Estructura de Datos G1<br>Modelos Económicos G1<br>Taller de Grado 1 G4<br>Taller de Grado 2 G4<br>Sistemas Distribuidos G1</td><td>SIS312 G1<br>SIS634 G1<br>SIS849 G4<br>SIS940 G4<br>OPT001 G1</td><td>25 Hrs. Académicas</td></tr>
-        <tr><td>20</td><td>Choque Gutierrez Juan Jose</td><td>Estructura de Datos G2<br>Análisis Discreto G1<br>Análisis Discreto G2</td><td>SIS312 G2<br>SIS342 G1<br>SIS342 G2</td><td>15Hrs. Académicas</td></tr>
-        <tr><td>21</td><td>Mamani Figueroa Jose David</td><td>Diseño y Programación Gráfica G2<br>Tecnologías Emergentes G1</td><td>SIS313 G2<br>SIS414 G1</td><td>13 Hrs. Académicas</td></tr>
-        <tr><td>22</td><td>Mercado Algaranaz Anny</td><td>Análisis de Sistemas 1 G1<br>Análisis de Sistemas 1 G2<br>Taller de Grado 1 G3<br>Taller de Grado 2 G3<br>Taller de Grado 2 G5</td><td>SIS416 G1<br>SIS416 G2<br>SIS849 G3<br>SIS940 G3<br>SIS940 G5</td><td>35 Hrs. Académicas</td></tr>
-        <tr><td>23</td><td>Choque Mamani Eduardo</td><td>Sistemas Digitales G1<br>Electrónica G1<br>Sistemas Digitales G2<br>Electrónica G2</td><td>SIS420 G1<br>SIS421 G1<br>SIS420 G2<br>SIS421 G2</td><td>12 Hrs. Académicas</td></tr>
-        <tr><td>24</td><td>Claure Sempertegui Jenny Cecilia</td><td>Análisis de Sistemas 2 G1<br>Análisis de Sistemas 2 G2<br>Ingeniería de Software G1<br>Taller de Grado 1 G1<br>Taller de Grado 2 G1</td><td>SIS517 G1<br>SIS517 G2<br>SIS646 G1<br>SIS849 G1<br>SIS940 G1</td><td>46 Hrs. Académicas</td></tr>
-        <tr><td>25</td><td>Duran Miranda Javier Alexander</td><td>Redes 1 G1<br>Taller de Redes G1<br>Taller de Redes G2<br>Seguridad de Sistemas G1</td><td>SIS523 G1<br>SIS625 G1<br>SIS625 G2<br>SIS737 G1</td><td>19 Hrs. Académicas</td></tr>
-        <tr><td>26</td><td>Castro Angulo Ditmar David</td><td>Técnicas de programación 2 G2<br>Investigación Operativa 2 G1<br>Dinámica de Sistemas G1<br>Seminario de Sistemas G1</td><td>SIS211 G2<br>SIS544 G1<br>SIS710 G1<br>SIS719 G1</td><td>39 Hrs. Académicas</td></tr>
-        <tr><td>27</td><td>Apaza Surculento Oscar</td><td>Ingeniería de Sistemas G1<br>Gestión de Calidad G1<br>Criptografía G1<br>Ética Profesional G1</td><td>SIS633 G1<br>SIS838 G1<br>OPT004 G1<br>OPT015 G1</td><td>26 Hrs. Académicas</td></tr>
-        <tr><td>28</td><td>Ruiz Molina Limber Ruben</td><td>Preparación y Evaluación de Proyectos G1<br>Taller de Grado 1 G2<br>Taller de Grado 2 G2</td><td>SIS736 G1<br>SIS849 G2<br>SIS939 G2</td><td>28 Hrs. Académicas</td></tr>
-    </table>
-    <br>
-    <a onclick="mostrarSeccion('inicio')">⬅ Volver</a>
-</div>
-
-<div id="materias" class="seccion">
-    <h3>Lista de Materias</h3>
-    <table>
-        <tr>
-            <th>Nro</th>
-            <th>Sigla</th>
-            <th>Nombre</th>
-            <th>Horas Teóricas</th>
-            <th>Horas Prácticas</th>
-            <th>Total Horas</th>
-            <th>Auxiliar</th>
-            <th>Docente</th>
-        </tr>
-        
-        <tr><td>1</td><td>LIN140 G1</td><td>Inglés Técnico</td><td>2</td><td>1</td><td>3</td><td>No tiene</td><td>Pacheco Alvarez Kary</td></tr>
-        <tr><td>2</td><td>LIN140 G2</td><td>Inglés Técnico</td><td>2</td><td>1</td><td>3</td><td>No tiene</td><td>Pacheco Alvarez Kary</td></tr>
-        <tr><td>3</td><td>LIN140 G3</td><td>Inglés Técnico</td><td>2</td><td>1</td><td>3</td><td>No tiene</td><td>Huayllas Garcia Juana</td></tr>
-        <tr><td>4</td><td>LIN140 G4</td><td>Inglés Técnico</td><td>2</td><td>1</td><td>3</td><td>No tiene</td><td>Huayllas Garcia Juana</td></tr>
-        <tr><td>5</td><td>MAT100 G1</td><td>Álgebra</td><td>3</td><td>0</td><td>3</td><td>Si tiene</td><td>Colque Caballero Sabino</td></tr>
-        <tr><td>6</td><td>MAT100 G2</td><td>Álgebra</td><td>3</td><td>0</td><td>3</td><td>Si tiene</td><td>Colque Caballero Sabino</td></tr>
-         <tr><td>7</td><td>MAT101 G3</td><td>Cálculo 1</td><td>3</td><td>0</td><td>3</td><td>Si tiene</td><td>Colque Caballero Sabino</td></tr>
-        <tr><td>8</td><td>MAT204 G1</td><td>Cálculo 2</td><td>3</td><td>0</td><td>3</td><td>Si tiene</td><td>Colque Caballero Sabino</td></tr>
-        <tr><td>9</td><td>SIS443 G1</td><td>Investigación Operativa 1</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Colque Caballero Sabino</td></tr>
-        <tr><td>10</td><td>MAT102 G1</td><td>Estadística 1</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Camacho Ocsachoque Nelly</td></tr>
-        <tr><td>11</td><td>MAT206 G1</td><td>Estadística 2</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Camacho Ocsachoque Nelly</td></tr>
-        <tr><td>12</td><td>SIS110 G1</td><td>Técnicas de Programación 1</td><td>3</td><td>2</td><td>5</td><td>Mendez Moreira Alex Adrian</td><td>Bravo Villafuerte Clever Matchless</td></tr>
-        <tr><td>13</td><td>SIS211 G1</td><td>Técnicas de Programación 2</td><td>3</td><td>2</td><td>5</td><td>Si tiene</td><td>Bravo Villafuerte Clever Matchless</td></tr>
-        <tr><td>14</td><td>SIS532 G1</td><td>Sistemas Operativos</td><td>3</td><td>2</td><td>5</td><td>Si tiene</td><td>Bravo Villafuerte Clever Matchless</td></tr>
-        <tr><td>15</td><td>SIS624 G1</td><td>Configuración de Servidores</td><td>2</td><td>3</td><td>5</td><td>Si tiene</td><td>Bravo Villafuerte Clever Matchless</td></tr>
-        <tr><td>16</td><td>MAT101 G2</td><td>Cálculo 1</td><td>3</td><td>0</td><td>3</td><td>Si tiene</td><td>Choque Mamani Porfirio</td></tr>
-        <tr><td>17</td><td>MAT203 G2</td><td>Álgebra Lineal y Teoría Matricial</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Choque Mamani Porfirio</td></tr>
-        <tr><td>18</td><td>MAT307 G1</td><td>Cálculo 3</td><td>3</td><td>0</td><td>3</td><td>Si tiene</td><td>Choque Mamani Porfirio</td></tr>
-        <tr><td>19</td><td>MAT102 G2</td><td>Estadística 1</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Borja Mamani Raquel</td></tr>
-        <tr><td>20</td><td>MAT206 G2</td><td>Estadística 2</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Borja Mamani Raquel</td></tr>
-        <tr><td>21</td><td>MAT102 G3</td><td>Estadística 1</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Huarachi Mamani Lidia</td></tr>
-        <tr><td>22</td><td>MAT102 G4</td><td>Estadística 1</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Ortega Reyes Efrain Pedro</td></tr>
-        <tr><td>23</td><td>MAT203 G1</td><td>Álgebra Lineal y Teoría Matricial</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Pozo Hidalgo Ruth</td></tr>
-        <tr><td>24</td><td>MAT204 G2</td><td>Cálculo 2</td><td>3</td><td>0</td><td>3</td><td>Si tiene</td><td>Pozo Hidalgo Ruth</td></tr>
-        <tr><td>25</td><td>MAT307 G2</td><td>Cálculo 3</td><td>3</td><td>0</td><td>3</td><td>Si tiene</td><td>Pozo Hidalgo Ruth</td></tr>
-        <tr><td>26</td><td>SIS110 G2</td><td>Técnicas de Programación 1</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Lopez Quentasi Jesus Eduard</td></tr>
-        <tr><td>27</td><td>SIS415 G1</td><td>Base de Datos</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Lopez Quentasi Jesus Eduard</td></tr>
-        <tr><td>28</td><td>SIS518 G2</td><td>Taller de Base de Datos</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Lopez Quentasi Jesus Eduard</td></tr>
-        <tr><td>29</td><td>SIS735 G1</td><td>Auditoría de Sistemas</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Lopez Quentasi Jesus Eduard</td></tr>
-        <tr><td>30</td><td>SIS110 G3</td><td>Técnicas de Programación 1</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Terrazas Quispe Wilfredo Fidel</td></tr>
-        <tr><td>31</td><td>SIS415 G2</td><td>Base de Datos</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Terrazas Quispe Wilfredo Fidel</td></tr>
-        <tr><td>32</td><td>SIS518 G1</td><td>Taller de Base de Datos</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Terrazas Quispe Wilfredo Fidel</td></tr>
-        <tr><td>33</td><td>SIS848 G1</td><td>Práctica Laboral</td><td>1</td><td>4</td><td>5</td><td>No tiene</td><td>Terrazas Quispe Wilfredo Fidel</td></tr>
-        <tr><td>34</td><td>SIS110 G4</td><td>Técnicas de Programación 1</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Puita Choque Gustavo Adolfo</td></tr>
-        <tr><td>35</td><td>SIS141 G2</td><td>Computación Básica</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Puita Choque Gustavo Adolfo</td></tr>
-        <tr><td>36</td><td>SIS522 G1</td><td>Arquitectura de Computadoras</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Puita Choque Gustavo Adolfo</td></tr>
-        <tr><td>37</td><td>SIS645 G1</td><td>Simulación de Sistemas</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Puita Choque Gustavo Adolfo</td></tr>
-        <tr><td>38</td><td>OPT005 G1</td><td>Robótica</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Puita Choque Gustavo Adolfo</td></tr>
-        <tr><td>39</td><td>SIS141 G1</td><td>Computación Básica</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Choque Matos Javier</td></tr>
-        <tr><td>40</td><td>SIS313 G1</td><td>Diseño y Programación Gráfica</td><td>3</td><td>2</td><td>5</td><td>Univ. Alex Sander Lopez Orcko</td><td>Choque Matos Javier</td></tr>
-        <tr><td>41</td><td>SIS414 G2</td><td>Tecnologías Emergentes</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Choque Matos Javier</td></tr>
-        <tr><td>42</td><td>SIS141 G3</td><td>Computación Básica</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Sanchez Perez Karina Mercedes Regina</td></tr>
-        <tr><td>43</td><td>SIS141 G4</td><td>Computación Básica</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Sanchez Perez Karina Mercedes Regina</td></tr>
-        <tr><td>44</td><td>SIS230 G2</td><td>Sistemas Contables</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Sanchez Perez Karina Mercedes Regina</td></tr>
-        <tr><td>45</td><td>SIS331 G1</td><td>Modelos Administrativos</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Sanchez Perez Karina Mercedes Regina</td></tr>
-        <tr><td>46</td><td>SIS230 G1</td><td>Sistemas Contables</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Velarde Flores Kimberly Luz</td></tr>
-        <tr><td>47</td><td>SIS331 G2</td><td>Modelos Administrativos</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Velarde Flores Kimberly Luz</td></tr>
-        <tr><td>48</td><td>SIS747 G1</td><td>Metodología de la Investigación</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Velarde Flores Kimberly Luz</td></tr>
-        <tr><td>49</td><td>FIS205 G1</td><td>Física 1</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Mamani Huanaco Elias</td></tr>
-        <tr><td>50</td><td>FIS308 G1</td><td>Física 2</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Mamani Huanaco Elias</td></tr>
-        <tr><td>51</td><td>FIS308 G2</td><td>Física 2</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Mamani Huanaco Elias</td></tr>
-        <tr><td>52</td><td>SIS421 G1</td><td>Electrónica</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Mamani Huanaco Elias</td></tr>
-        <tr><td>53</td><td>FIS205 G2</td><td>Física 1</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Ramos Castro Roberto</td></tr>
-        <tr><td>54</td><td>SIS312 G1</td><td>Estructura de Datos</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Humerez Martinez David Grover</td></tr>
-        <tr><td>55</td><td>SIS634 G1</td><td>Modelos Económicos</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Humerez Martinez David Grover</td></tr>
-        <tr><td>56</td><td>SIS849 G4</td><td>Taller de Grado 1</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Humerez Martinez David Grover</td></tr>
-        <tr><td>57</td><td>SIS940 G4</td><td>Taller de Grado 2</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Humerez Martinez David Grover</td></tr>
-        <tr><td>58</td><td>OPT001 G1</td><td>Sistemas Distribuidos</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Humerez Martinez David Grover</td></tr>
-        <tr><td>59</td><td>SIS312 G2</td><td>Estructura de Datos</td><td>3</td><td>2</td><td>5</td><td>Si tiene</td><td>Choque Gutierrez Juan Jose</td></tr>
-        <tr><td>60</td><td>SIS342 G1</td><td>Análisis Discreto</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Choque Gutierrez Juan Jose</td></tr>
-        <tr><td>61</td><td>SIS342 G2</td><td>Análisis Discreto</td><td>3</td><td>1</td><td>4</td><td>Si tiene</td><td>Choque Gutierrez Juan Jose</td></tr>
-        <tr><td>62</td><td>SIS313 G2</td><td>Diseño y Programación Gráfica</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Mamani Figueroa Jose David</td></tr>
-        <tr><td>63</td><td>SIS414 G1</td><td>Tecnologías Emergentes</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Mamani Figueroa Jose David</td></tr>
-        <tr><td>63</td><td>SIS313 G2</td><td>Diseño y Programación Gráfica</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Mamani Figueroa Jose David</td></tr>
-        <tr><td>64</td><td>SIS414 G1</td><td>Tecnologías Emergentes</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Mamani Figueroa Jose David</td></tr>
-        <tr><td>65</td><td>SIS416 G1</td><td>Análisis de Sistemas 1</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Mercado Algaranaz Anny</td></tr>
-        <tr><td>66</td><td>SIS416 G2</td><td>Análisis de Sistemas 1</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Mercado Algaranaz Anny</td></tr>
-        <tr><td>67</td><td>SIS849 G3</td><td>Taller de Grado 1</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Mercado Algaranaz Anny</td></tr>
-        <tr><td>68</td><td>SIS940 G3</td><td>Taller de Grado 2</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Mercado Algaranaz Anny</td></tr>
-        <tr><td>69</td><td>SIS940 G5</td><td>Taller de Grado 2</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Mercado Algaranaz Anny</td></tr>
-        <tr><td>70</td><td>SIS420 G1</td><td>Sistemas Digitales</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Choque Mamani Eduardo</td></tr>
-        <tr><td>71</td><td>SIS421 G1</td><td>Electrónica</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Choque Mamani Eduardo</td></tr>
-        <tr><td>72</td><td>SIS420 G2</td><td>Sistemas Digitales</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Choque Mamani Eduardo</td></tr>
-        <tr><td>73</td><td>SIS421 G2</td><td>Electrónica</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Choque Mamani Eduardo</td></tr>
-        <tr><td>74</td><td>SIS517 G1</td><td>Análisis de Sistemas 2</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Claure Sempertegui Jenny Cecilia</td></tr>
-        <tr><td>75</td><td>SIS517 G2</td><td>Análisis de Sistemas 2</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Claure Sempertegui Jenny Cecilia</td></tr>
-        <tr><td>76</td><td>SIS646 G1</td><td>Ingeniería de Software</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Claure Sempertegui Jenny Cecilia</td></tr>
-        <tr><td>77</td><td>SIS849 G1</td><td>Taller de Grado 1</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Claure Sempertegui Jenny Cecilia</td></tr>
-        <tr><td>78</td><td>SIS940 G1</td><td>Taller de Grado 2</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Claure Sempertegui Jenny Cecilia</td></tr>
-        <tr><td>79</td><td>SIS523 G1</td><td>Redes 1</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Duran Miranda Javier Alexander</td></tr>
-        <tr><td>80</td><td>SIS625 G1</td><td>Taller de Redes</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Duran Miranda Javier Alexander</td></tr>
-        <tr><td>81</td><td>SIS625 G2</td><td>Taller de Redes</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Duran Miranda Javier Alexander</td></tr>
-        <tr><td>82</td><td>SIS737 G1</td><td>Seguridad de Sistemas</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Duran Miranda Javier Alexander</td></tr>
-        <tr><td>83</td><td>SIS211 G2</td><td>Técnicas de Programación 2</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Castro Angulo Ditmar David</td></tr>
-        <tr><td>84</td><td>SIS544 G1</td><td>Investigación Operativa 2</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Castro Angulo Ditmar David</td></tr>
-        <tr><td>85</td><td>SIS710 G1</td><td>Dinámica de Sistemas</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Castro Angulo Ditmar David</td></tr>
-        <tr><td>86</td><td>SIS719 G1</td><td>Seminario de Sistemas</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Castro Angulo Ditmar David</td></tr>
-        <tr><td>87</td><td>SIS633 G1</td><td>Ingeniería de Sistemas</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Apaza Surculento Oscar</td></tr>
-        <tr><td>88</td><td>SIS838 G1</td><td>Gestión de Calidad</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Apaza Surculento Oscar</td></tr>
-        <tr><td>89</td><td>OPT004 G1</td><td>Criptografía</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Apaza Surculento Oscar</td></tr>
-        <tr><td>90</td><td>OPT015 G1</td><td>Ética Profesional</td><td>3</td><td>1</td><td>4</td><td>No tiene</td><td>Apaza Surculento Oscar</td></tr>
-        <tr><td>91</td><td>SIS736 G1</td><td>Preparación y Evaluación de Proyectos</td><td>3</td><td>2</td><td>5</td><td>No tiene</td><td>Ruiz Molina Limber Ruben</td></tr>
-        <tr><td>92</td><td>SIS849 G2</td><td>Taller de Grado 1</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Ruiz Molina Limber Ruben</td></tr>
-        <tr><td>93</td><td>SIS939 G2</td><td>Taller de Grado 2</td><td>2</td><td>3</td><td>5</td><td>No tiene</td><td>Ruiz Molina Limber Ruben</td></tr>
-    </table>
-    <br>
-    <a onclick="mostrarSeccion('inicio')">⬅ Volver</a>
-</div>
-</body>
+            a {
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        </style>
+        <script>
+            function mostrarSeccion(id) {
+                document.getElementById('inicio').classList.remove('activa');
+                document.getElementById('docentes').classList.remove('activa');
+                document.getElementById('materias').classList.remove('activa');
+                document.getElementById(id).classList.add('activa');
+            }
+        </script>
+    </head>
+    <body>
+        <div id="inicio" class="seccion activa">
+            <h1>Ingeniería de Sistemas</h1>
+            <img src="data:image/jpeg;base64,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" alt="Logo">
+            <h2>Semestre: 1/2026</h2>
+            <ul>
+                <li>
+                    <a onclick="mostrarSeccion('docentes')">Docentes</a>
+                </li>
+                <li>
+                    <a onclick="mostrarSeccion('materias')">Materias</a>
+                </li>
+            </ul>
+        </div>
+        <div id="docentes" class="seccion">
+            <h3>Lista Docentes 1/2026</h3>
+            <table>
+                <tr>
+                    <th>Nro</th>
+                    <th>Apellidos y Nombres</th>
+                    <th>Materias</th>
+                    <th>Sigla</th>
+                    <th>Carga Horaria</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Pacheco Alvarez Kary</td>
+                    <td>
+                        Inglés técnico G1<br>Inglés técnico G2
+                    </td>
+                    <td>
+                        LIN140 G1<br>LIN140 G2
+                    </td>
+                    <td>8 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Colque Caballero Sabino</td>
+                    <td>
+                        Álgebra G1<br>
+                        Álgebra G2<br>
+                        Cálculo 1 G3<br>
+                        Cálculo 2 G1<br>Investigación Operativa 1 G1
+                    </td>
+                    <td>
+                        MAT100 G1<br>
+                        MAT100 G2<br>
+                        MAT101 G3<br>
+                        MAT204 G1<br>SIS443 G1
+                    </td>
+                    <td>30 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Camacho Ocsachoque Nelly</td>
+                    <td>
+                        Estadística 1 G1<br>Estadística 2 G1
+                    </td>
+                    <td>
+                        MAT102 G1<br>MAT206 G1
+                    </td>
+                    <td>10 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Bravo Villafuerte Clever Matchless</td>
+                    <td>
+                        Técnicas de programación 1 G1<br>
+                        Técnicas de programación 2 G1<br>
+                        Sistemas Operativos G1<br>Configuración de servidores G1
+                    </td>
+                    <td>
+                        SIS110 G1<br>
+                        SIS211 G1<br>
+                        SIS532 G1<br>SIS624 G1
+                    </td>
+                    <td>26 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Huayllas Garcia Juana</td>
+                    <td>
+                        Inglés Técnico G3<br>Inglés Técnico G4
+                    </td>
+                    <td>
+                        LIN140 G3<br>LIN140 G4
+                    </td>
+                    <td>24 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Choque Mamani Porfirio</td>
+                    <td>
+                        Cálculo 1 G2<br>
+                        Álgebra Lineal y Teoría Matricial G2<br>Cálculo 3 G1
+                    </td>
+                    <td>
+                        MAT101 G2<br>
+                        MAT203 G2<br>MAT307 G1
+                    </td>
+                    <td>30 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Borja Mamani Raquel</td>
+                    <td>
+                        Estadística 1 G2<br>Estadística 2 G2
+                    </td>
+                    <td>
+                        MAT102 G2<br>MAT206 G2
+                    </td>
+                    <td>30 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Huarachi Mamani Lidia</td>
+                    <td>Estadística 1 G3</td>
+                    <td>MAT102 G3</td>
+                    <td>15 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Ortega Reyes Efrain Pedro</td>
+                    <td>Estadística 1 G4</td>
+                    <td>MAT102 G4</td>
+                    <td>28 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Pozo Hidalgo Ruth</td>
+                    <td>
+                        Álgebra Lineal y Teoría Matricial G1<br>
+                        Cálculo 2 G2<br>Cálculo 3 G2
+                    </td>
+                    <td>
+                        MAT203 G1<br>
+                        MAT204 G2<br>MAT307 G2
+                    </td>
+                    <td>30 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Lopez Quentasi Jesus Eduard</td>
+                    <td>
+                        Técnicas de programación 1 G2<br>
+                        Base de Datos G1<br>
+                        Taller de Base de Datos G2<br>Auditoría de Sistemas G1
+                    </td>
+                    <td>
+                        SIS110 G2<br>
+                        SIS415 G1<br>
+                        SIS518 G2<br>SIS735 G1
+                    </td>
+                    <td>40 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Terrazas Quispe Wilfredo Fidel</td>
+                    <td>
+                        Técnicas de programación 1 G3<br>
+                        Base de Datos G2<br>
+                        Taller de Base de Datos G1<br>Práctica Laboral G1
+                    </td>
+                    <td>
+                        SIS110 G3<br>
+                        SIS415 G2<br>
+                        SIS518 G1<br>SIS848 G1
+                    </td>
+                    <td>40 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Puita Choque Gustavo Adolfo</td>
+                    <td>
+                        Técnicas de programación 1 G4<br>
+                        Computación Básica G2<br>
+                        Arquitectura de Computadoras G1<br>
+                        Simulación de Sistemas G1<br>Robótica G1
+                    </td>
+                    <td>
+                        SIS110 G4<br>
+                        SIS141 G2<br>
+                        SIS522 G1<br>
+                        SIS645 G1<br>OPT005 G1
+                    </td>
+                    <td>48 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Choque Matos Javier</td>
+                    <td>
+                        Computación Básica G1<br>
+                        Diseño y Programación Gráfica G1<br>Tecnologías Emergentes G2
+                    </td>
+                    <td>
+                        SIS141 G1<br>
+                        SIS313 G1<br>SIS414 G2
+                    </td>
+                    <td>24 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Sanchez Perez Karina Mercedes Regina</td>
+                    <td>
+                        Computación Básica G3<br>
+                        Computación Básica G4<br>
+                        Sistemas Contables G2<br>Modelos Administrativos G1
+                    </td>
+                    <td>
+                        SIS141 G3<br>
+                        SIS141 G4<br>
+                        SIS230 G2<br>SIS331 G1
+                    </td>
+                    <td>28 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Velarde Flores Kimberly Luz</td>
+                    <td>
+                        Sistemas Contables G1<br>
+                        Modelos Administrativos G2<br>Metodología de la Investigación G1
+                    </td>
+                    <td>
+                        SIS230 G1<br>
+                        SIS331 G2<br>SIS747 G1
+                    </td>
+                    <td>18 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Mamani Huanaco Elias</td>
+                    <td>
+                        Física 1 G1<br>
+                        Física 2 G1<br>
+                        Física 2 G2<br>Electrónica G1
+                    </td>
+                    <td>
+                        FIS205 G1<br>
+                        FIS308 G1<br>
+                        FIS308 G2<br>SIS421 G1
+                    </td>
+                    <td>33 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Ramos Castro Roberto</td>
+                    <td>Física 1 G2</td>
+                    <td>FIS205 G2</td>
+                    <td>18 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Humerez Martinez David Grover</td>
+                    <td>
+                        Estructura de Datos G1<br>
+                        Modelos Económicos G1<br>
+                        Taller de Grado 1 G4<br>
+                        Taller de Grado 2 G4<br>Sistemas Distribuidos G1
+                    </td>
+                    <td>
+                        SIS312 G1<br>
+                        SIS634 G1<br>
+                        SIS849 G4<br>
+                        SIS940 G4<br>OPT001 G1
+                    </td>
+                    <td>25 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Choque Gutierrez Juan Jose</td>
+                    <td>
+                        Estructura de Datos G2<br>
+                        Análisis Discreto G1<br>Análisis Discreto G2
+                    </td>
+                    <td>
+                        SIS312 G2<br>
+                        SIS342 G1<br>SIS342 G2
+                    </td>
+                    <td>15Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Mamani Figueroa Jose David</td>
+                    <td>
+                        Diseño y Programación Gráfica G2<br>Tecnologías Emergentes G1
+                    </td>
+                    <td>
+                        SIS313 G2<br>SIS414 G1
+                    </td>
+                    <td>13 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Mercado Algaranaz Anny</td>
+                    <td>
+                        Análisis de Sistemas 1 G1<br>
+                        Análisis de Sistemas 1 G2<br>
+                        Taller de Grado 1 G3<br>
+                        Taller de Grado 2 G3<br>Taller de Grado 2 G5
+                    </td>
+                    <td>
+                        SIS416 G1<br>
+                        SIS416 G2<br>
+                        SIS849 G3<br>
+                        SIS940 G3<br>SIS940 G5
+                    </td>
+                    <td>35 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Choque Mamani Eduardo</td>
+                    <td>
+                        Sistemas Digitales G1<br>
+                        Electrónica G1<br>
+                        Sistemas Digitales G2<br>Electrónica G2
+                    </td>
+                    <td>
+                        SIS420 G1<br>
+                        SIS421 G1<br>
+                        SIS420 G2<br>SIS421 G2
+                    </td>
+                    <td>12 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Claure Sempertegui Jenny Cecilia</td>
+                    <td>
+                        Análisis de Sistemas 2 G1<br>
+                        Análisis de Sistemas 2 G2<br>
+                        Ingeniería de Software G1<br>
+                        Taller de Grado 1 G1<br>Taller de Grado 2 G1
+                    </td>
+                    <td>
+                        SIS517 G1<br>
+                        SIS517 G2<br>
+                        SIS646 G1<br>
+                        SIS849 G1<br>SIS940 G1
+                    </td>
+                    <td>46 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Duran Miranda Javier Alexander</td>
+                    <td>
+                        Redes 1 G1<br>
+                        Taller de Redes G1<br>
+                        Taller de Redes G2<br>Seguridad de Sistemas G1
+                    </td>
+                    <td>
+                        SIS523 G1<br>
+                        SIS625 G1<br>
+                        SIS625 G2<br>SIS737 G1
+                    </td>
+                    <td>19 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Castro Angulo Ditmar David</td>
+                    <td>
+                        Técnicas de programación 2 G2<br>
+                        Investigación Operativa 2 G1<br>
+                        Dinámica de Sistemas G1<br>Seminario de Sistemas G1
+                    </td>
+                    <td>
+                        SIS211 G2<br>
+                        SIS544 G1<br>
+                        SIS710 G1<br>SIS719 G1
+                    </td>
+                    <td>39 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Apaza Surculento Oscar</td>
+                    <td>
+                        Ingeniería de Sistemas G1<br>
+                        Gestión de Calidad G1<br>
+                        Criptografía G1<br>Ética Profesional G1
+                    </td>
+                    <td>
+                        SIS633 G1<br>
+                        SIS838 G1<br>
+                        OPT004 G1<br>OPT015 G1
+                    </td>
+                    <td>26 Hrs. Académicas</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Ruiz Molina Limber Ruben</td>
+                    <td>
+                        Preparación y Evaluación de Proyectos G1<br>
+                        Taller de Grado 1 G2<br>Taller de Grado 2 G2
+                    </td>
+                    <td>
+                        SIS736 G1<br>
+                        SIS849 G2<br>SIS939 G2
+                    </td>
+                    <td>28 Hrs. Académicas</td>
+                </tr>
+            </table>
+            <br>
+            <a onclick="mostrarSeccion('inicio')">⬅ Volver</a>
+        </div>
+        <div id="materias" class="seccion">
+            <h3>Lista de Materias</h3>
+            <table>
+                <tr>
+                    <th>Nro</th>
+                    <th>Sigla</th>
+                    <th>Nombre</th>
+                    <th>Horas Teóricas</th>
+                    <th>Horas Prácticas</th>
+                    <th>Total Horas</th>
+                    <th>Auxiliar</th>
+                    <th>Docente</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>LIN140 G1</td>
+                    <td>Inglés Técnico</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>No tiene</td>
+                    <td>Pacheco Alvarez Kary</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>LIN140 G2</td>
+                    <td>Inglés Técnico</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>No tiene</td>
+                    <td>Pacheco Alvarez Kary</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>LIN140 G3</td>
+                    <td>Inglés Técnico</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>No tiene</td>
+                    <td>Huayllas Garcia Juana</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>LIN140 G4</td>
+                    <td>Inglés Técnico</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>No tiene</td>
+                    <td>Huayllas Garcia Juana</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>MAT100 G1</td>
+                    <td>Álgebra</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>Si tiene</td>
+                    <td>Colque Caballero Sabino</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>MAT100 G2</td>
+                    <td>Álgebra</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>Si tiene</td>
+                    <td>Colque Caballero Sabino</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>MAT101 G3</td>
+                    <td>Cálculo 1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>Si tiene</td>
+                    <td>Colque Caballero Sabino</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>MAT204 G1</td>
+                    <td>Cálculo 2</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>Si tiene</td>
+                    <td>Colque Caballero Sabino</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>SIS443 G1</td>
+                    <td>Investigación Operativa 1</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Colque Caballero Sabino</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>MAT102 G1</td>
+                    <td>Estadística 1</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Camacho Ocsachoque Nelly</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>MAT206 G1</td>
+                    <td>Estadística 2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Camacho Ocsachoque Nelly</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>SIS110 G1</td>
+                    <td>Técnicas de Programación 1</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>Mendez Moreira Alex Adrian</td>
+                    <td>Bravo Villafuerte Clever Matchless</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>SIS211 G1</td>
+                    <td>Técnicas de Programación 2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>Si tiene</td>
+                    <td>Bravo Villafuerte Clever Matchless</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>SIS532 G1</td>
+                    <td>Sistemas Operativos</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>Si tiene</td>
+                    <td>Bravo Villafuerte Clever Matchless</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>SIS624 G1</td>
+                    <td>Configuración de Servidores</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>Si tiene</td>
+                    <td>Bravo Villafuerte Clever Matchless</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>MAT101 G2</td>
+                    <td>Cálculo 1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>Si tiene</td>
+                    <td>Choque Mamani Porfirio</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>MAT203 G2</td>
+                    <td>Álgebra Lineal y Teoría Matricial</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Choque Mamani Porfirio</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>MAT307 G1</td>
+                    <td>Cálculo 3</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>Si tiene</td>
+                    <td>Choque Mamani Porfirio</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>MAT102 G2</td>
+                    <td>Estadística 1</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Borja Mamani Raquel</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>MAT206 G2</td>
+                    <td>Estadística 2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Borja Mamani Raquel</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>MAT102 G3</td>
+                    <td>Estadística 1</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Huarachi Mamani Lidia</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>MAT102 G4</td>
+                    <td>Estadística 1</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Ortega Reyes Efrain Pedro</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>MAT203 G1</td>
+                    <td>Álgebra Lineal y Teoría Matricial</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Pozo Hidalgo Ruth</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>MAT204 G2</td>
+                    <td>Cálculo 2</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>Si tiene</td>
+                    <td>Pozo Hidalgo Ruth</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>MAT307 G2</td>
+                    <td>Cálculo 3</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>Si tiene</td>
+                    <td>Pozo Hidalgo Ruth</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>SIS110 G2</td>
+                    <td>Técnicas de Programación 1</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Lopez Quentasi Jesus Eduard</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>SIS415 G1</td>
+                    <td>Base de Datos</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Lopez Quentasi Jesus Eduard</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>SIS518 G2</td>
+                    <td>Taller de Base de Datos</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Lopez Quentasi Jesus Eduard</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>SIS735 G1</td>
+                    <td>Auditoría de Sistemas</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Lopez Quentasi Jesus Eduard</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>SIS110 G3</td>
+                    <td>Técnicas de Programación 1</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Terrazas Quispe Wilfredo Fidel</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>SIS415 G2</td>
+                    <td>Base de Datos</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Terrazas Quispe Wilfredo Fidel</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>SIS518 G1</td>
+                    <td>Taller de Base de Datos</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Terrazas Quispe Wilfredo Fidel</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>SIS848 G1</td>
+                    <td>Práctica Laboral</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Terrazas Quispe Wilfredo Fidel</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>SIS110 G4</td>
+                    <td>Técnicas de Programación 1</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Puita Choque Gustavo Adolfo</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>SIS141 G2</td>
+                    <td>Computación Básica</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Puita Choque Gustavo Adolfo</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>SIS522 G1</td>
+                    <td>Arquitectura de Computadoras</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Puita Choque Gustavo Adolfo</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>SIS645 G1</td>
+                    <td>Simulación de Sistemas</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Puita Choque Gustavo Adolfo</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>OPT005 G1</td>
+                    <td>Robótica</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Puita Choque Gustavo Adolfo</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>SIS141 G1</td>
+                    <td>Computación Básica</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Choque Matos Javier</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>SIS313 G1</td>
+                    <td>Diseño y Programación Gráfica</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>Univ. Alex Sander Lopez Orcko</td>
+                    <td>Choque Matos Javier</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>SIS414 G2</td>
+                    <td>Tecnologías Emergentes</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Choque Matos Javier</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>SIS141 G3</td>
+                    <td>Computación Básica</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Sanchez Perez Karina Mercedes Regina</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>SIS141 G4</td>
+                    <td>Computación Básica</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Sanchez Perez Karina Mercedes Regina</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>SIS230 G2</td>
+                    <td>Sistemas Contables</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Sanchez Perez Karina Mercedes Regina</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>SIS331 G1</td>
+                    <td>Modelos Administrativos</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Sanchez Perez Karina Mercedes Regina</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>SIS230 G1</td>
+                    <td>Sistemas Contables</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Velarde Flores Kimberly Luz</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>SIS331 G2</td>
+                    <td>Modelos Administrativos</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Velarde Flores Kimberly Luz</td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>SIS747 G1</td>
+                    <td>Metodología de la Investigación</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Velarde Flores Kimberly Luz</td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>FIS205 G1</td>
+                    <td>Física 1</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Mamani Huanaco Elias</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>FIS308 G1</td>
+                    <td>Física 2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Mamani Huanaco Elias</td>
+                </tr>
+                <tr>
+                    <td>51</td>
+                    <td>FIS308 G2</td>
+                    <td>Física 2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Mamani Huanaco Elias</td>
+                </tr>
+                <tr>
+                    <td>52</td>
+                    <td>SIS421 G1</td>
+                    <td>Electrónica</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Mamani Huanaco Elias</td>
+                </tr>
+                <tr>
+                    <td>53</td>
+                    <td>FIS205 G2</td>
+                    <td>Física 1</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Ramos Castro Roberto</td>
+                </tr>
+                <tr>
+                    <td>54</td>
+                    <td>SIS312 G1</td>
+                    <td>Estructura de Datos</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Humerez Martinez David Grover</td>
+                </tr>
+                <tr>
+                    <td>55</td>
+                    <td>SIS634 G1</td>
+                    <td>Modelos Económicos</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Humerez Martinez David Grover</td>
+                </tr>
+                <tr>
+                    <td>56</td>
+                    <td>SIS849 G4</td>
+                    <td>Taller de Grado 1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Humerez Martinez David Grover</td>
+                </tr>
+                <tr>
+                    <td>57</td>
+                    <td>SIS940 G4</td>
+                    <td>Taller de Grado 2</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Humerez Martinez David Grover</td>
+                </tr>
+                <tr>
+                    <td>58</td>
+                    <td>OPT001 G1</td>
+                    <td>Sistemas Distribuidos</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Humerez Martinez David Grover</td>
+                </tr>
+                <tr>
+                    <td>59</td>
+                    <td>SIS312 G2</td>
+                    <td>Estructura de Datos</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>Si tiene</td>
+                    <td>Choque Gutierrez Juan Jose</td>
+                </tr>
+                <tr>
+                    <td>60</td>
+                    <td>SIS342 G1</td>
+                    <td>Análisis Discreto</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Choque Gutierrez Juan Jose</td>
+                </tr>
+                <tr>
+                    <td>61</td>
+                    <td>SIS342 G2</td>
+                    <td>Análisis Discreto</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>Si tiene</td>
+                    <td>Choque Gutierrez Juan Jose</td>
+                </tr>
+                <tr>
+                    <td>62</td>
+                    <td>SIS313 G2</td>
+                    <td>Diseño y Programación Gráfica</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Mamani Figueroa Jose David</td>
+                </tr>
+                <tr>
+                    <td>63</td>
+                    <td>SIS414 G1</td>
+                    <td>Tecnologías Emergentes</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Mamani Figueroa Jose David</td>
+                </tr>
+                <tr>
+                    <td>63</td>
+                    <td>SIS313 G2</td>
+                    <td>Diseño y Programación Gráfica</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Mamani Figueroa Jose David</td>
+                </tr>
+                <tr>
+                    <td>64</td>
+                    <td>SIS414 G1</td>
+                    <td>Tecnologías Emergentes</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Mamani Figueroa Jose David</td>
+                </tr>
+                <tr>
+                    <td>65</td>
+                    <td>SIS416 G1</td>
+                    <td>Análisis de Sistemas 1</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Mercado Algaranaz Anny</td>
+                </tr>
+                <tr>
+                    <td>66</td>
+                    <td>SIS416 G2</td>
+                    <td>Análisis de Sistemas 1</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Mercado Algaranaz Anny</td>
+                </tr>
+                <tr>
+                    <td>67</td>
+                    <td>SIS849 G3</td>
+                    <td>Taller de Grado 1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Mercado Algaranaz Anny</td>
+                </tr>
+                <tr>
+                    <td>68</td>
+                    <td>SIS940 G3</td>
+                    <td>Taller de Grado 2</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Mercado Algaranaz Anny</td>
+                </tr>
+                <tr>
+                    <td>69</td>
+                    <td>SIS940 G5</td>
+                    <td>Taller de Grado 2</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Mercado Algaranaz Anny</td>
+                </tr>
+                <tr>
+                    <td>70</td>
+                    <td>SIS420 G1</td>
+                    <td>Sistemas Digitales</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Choque Mamani Eduardo</td>
+                </tr>
+                <tr>
+                    <td>71</td>
+                    <td>SIS421 G1</td>
+                    <td>Electrónica</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Choque Mamani Eduardo</td>
+                </tr>
+                <tr>
+                    <td>72</td>
+                    <td>SIS420 G2</td>
+                    <td>Sistemas Digitales</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Choque Mamani Eduardo</td>
+                </tr>
+                <tr>
+                    <td>73</td>
+                    <td>SIS421 G2</td>
+                    <td>Electrónica</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Choque Mamani Eduardo</td>
+                </tr>
+                <tr>
+                    <td>74</td>
+                    <td>SIS517 G1</td>
+                    <td>Análisis de Sistemas 2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Claure Sempertegui Jenny Cecilia</td>
+                </tr>
+                <tr>
+                    <td>75</td>
+                    <td>SIS517 G2</td>
+                    <td>Análisis de Sistemas 2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Claure Sempertegui Jenny Cecilia</td>
+                </tr>
+                <tr>
+                    <td>76</td>
+                    <td>SIS646 G1</td>
+                    <td>Ingeniería de Software</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Claure Sempertegui Jenny Cecilia</td>
+                </tr>
+                <tr>
+                    <td>77</td>
+                    <td>SIS849 G1</td>
+                    <td>Taller de Grado 1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Claure Sempertegui Jenny Cecilia</td>
+                </tr>
+                <tr>
+                    <td>78</td>
+                    <td>SIS940 G1</td>
+                    <td>Taller de Grado 2</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Claure Sempertegui Jenny Cecilia</td>
+                </tr>
+                <tr>
+                    <td>79</td>
+                    <td>SIS523 G1</td>
+                    <td>Redes 1</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Duran Miranda Javier Alexander</td>
+                </tr>
+                <tr>
+                    <td>80</td>
+                    <td>SIS625 G1</td>
+                    <td>Taller de Redes</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Duran Miranda Javier Alexander</td>
+                </tr>
+                <tr>
+                    <td>81</td>
+                    <td>SIS625 G2</td>
+                    <td>Taller de Redes</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Duran Miranda Javier Alexander</td>
+                </tr>
+                <tr>
+                    <td>82</td>
+                    <td>SIS737 G1</td>
+                    <td>Seguridad de Sistemas</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Duran Miranda Javier Alexander</td>
+                </tr>
+                <tr>
+                    <td>83</td>
+                    <td>SIS211 G2</td>
+                    <td>Técnicas de Programación 2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Castro Angulo Ditmar David</td>
+                </tr>
+                <tr>
+                    <td>84</td>
+                    <td>SIS544 G1</td>
+                    <td>Investigación Operativa 2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Castro Angulo Ditmar David</td>
+                </tr>
+                <tr>
+                    <td>85</td>
+                    <td>SIS710 G1</td>
+                    <td>Dinámica de Sistemas</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Castro Angulo Ditmar David</td>
+                </tr>
+                <tr>
+                    <td>86</td>
+                    <td>SIS719 G1</td>
+                    <td>Seminario de Sistemas</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Castro Angulo Ditmar David</td>
+                </tr>
+                <tr>
+                    <td>87</td>
+                    <td>SIS633 G1</td>
+                    <td>Ingeniería de Sistemas</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Apaza Surculento Oscar</td>
+                </tr>
+                <tr>
+                    <td>88</td>
+                    <td>SIS838 G1</td>
+                    <td>Gestión de Calidad</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Apaza Surculento Oscar</td>
+                </tr>
+                <tr>
+                    <td>89</td>
+                    <td>OPT004 G1</td>
+                    <td>Criptografía</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Apaza Surculento Oscar</td>
+                </tr>
+                <tr>
+                    <td>90</td>
+                    <td>OPT015 G1</td>
+                    <td>Ética Profesional</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>No tiene</td>
+                    <td>Apaza Surculento Oscar</td>
+                </tr>
+                <tr>
+                    <td>91</td>
+                    <td>SIS736 G1</td>
+                    <td>Preparación y Evaluación de Proyectos</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Ruiz Molina Limber Ruben</td>
+                </tr>
+                <tr>
+                    <td>92</td>
+                    <td>SIS849 G2</td>
+                    <td>Taller de Grado 1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Ruiz Molina Limber Ruben</td>
+                </tr>
+                <tr>
+                    <td>93</td>
+                    <td>SIS939 G2</td>
+                    <td>Taller de Grado 2</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>No tiene</td>
+                    <td>Ruiz Molina Limber Ruben</td>
+                </tr>
+            </table>
+            <br>
+            <a onclick="mostrarSeccion('inicio')">⬅ Volver</a>
+        </div>
+    </body>
 </html>
